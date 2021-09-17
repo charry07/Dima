@@ -9,4 +9,4 @@ Lucas Mateo Puello Campuzano (lucasm9302@gmail.com) git: lucasm9302
 
 David Gutierrez Mendoza (davidgm1050@gmail.com) git -> git David1050g 
 
-jhonatan esteban villareal loepz (lojhonat0@gmail.com) git -> jhonatanlo123
+jhonatan esteban villareal lopez (lojhonat0@gmail.com) git -> jhonatanlo123
