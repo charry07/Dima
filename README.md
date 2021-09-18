@@ -7,4 +7,6 @@ Juan Nicolás Peñaranda Díaz (nicolaspenaranda02@gmail.com) git -> NicolasPena
 
 Lucas Mateo Puello Campuzano (lucasm9302@gmail.com) git: lucasm9302
 
-David Gutierrez Mendoza (davidgm1050@gmail.com) git -> git David1050g
+David Gutierrez Mendoza (davidgm1050@gmail.com) git -> git David1050g 
+
+jhonatan esteban villareal lopez (lojhonat0@gmail.com) git -> jhonatanlo123
