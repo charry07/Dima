@@ -1,0 +1,188 @@
+body{
+    font-family: Courier, Verdana, sans-serif;
+    background-color: #fdffd3;
+    font-size: 1.2em;
+    margin: 4%;
+    display: flexbox;
+}
+
+input{
+    font-family: Courier, Verdana, sans-serif;
+}
+
+h1,h2,h3{
+    font-family: monospace;
+}
+
+.submit_button{
+    font-size: 100%;
+    background-color: #ff923f;
+    border-color: #ff923f;
+    border-radius: 5px;
+}
+
+.menu_desplegable{
+    font-family: Courier, Verdana, sans-serif;
+}
+
+.input_buscar{
+    margin-right: 1em;
+    float:right;
+    width: 50%;
+}
+
+.input_registrar{
+    margin-right: 1em;
+    float:right;
+    width: 50%;
+}
+
+#seccion-busqueda{
+    width: 49%;
+    min-width: fit-content;
+}
+
+#seccion-ver_actualizar{
+    width: 49%;
+    height: 23em;
+    display:flex;
+    min-width: fit-content;
+}
+
+#seccion-registrar{
+    width: 49%;
+    display: flex;
+    float: right;
+    min-width: fit-content;
+    position: relative;
+}
+
+#div-titulo_principal{
+    background-color: #d4d3fe;
+    border-color: red;
+    border-radius: 5px;
+    border-style: solid;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#div-busqueda{
+    background-color: #d4d3fe;
+    border-color:red;
+    border-radius: 5px;
+    border-style:solid;
+    padding: 0.5em 1em 1.25em 1.25em;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 92%;
+    max-width: 92%;
+    height: auto;
+    flex-direction:column-reverse;
+}
+
+#form-busqueda div{
+    padding-top: 1em;
+    font-size: 90%;
+    text-align: left;
+}
+
+#div-ver_producto input, #div-actualizar_producto input{
+    margin-top: 0.75em;
+    width: 70%;
+}
+
+#div-ver_producto{
+    background-color: #d4d3fe;
+    border-color:red;
+    border-radius: 5px;
+    border-style:solid;
+    padding: 0.5em 1em 1.25em 1.25em;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    text-align:center;
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+    position: relative;
+}
+
+#form-ver div{
+    font-size: 85%;
+    text-align:left;
+}
+
+#div-actualizar_producto{
+    background-color: #d4d3fe;
+    border-color:red;
+    border-radius: 5px;
+    border-style:solid;
+    padding: 0.5em 1em 1.25em 1.25em;
+    margin-bottom: 20px;
+    text-align:center;
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+    position: relative;
+}
+
+#form-actualizar div{
+    font-size: 85%;
+    text-align:left;
+}
+
+#div-registro{
+    background-color: #d4d3fe;
+    border-color:red;
+    border-radius: 5px;
+    border-style:solid;
+    padding: 0.5em 1em 1.25em 1.25em;
+    margin-bottom: 20px;
+    text-align:center;
+    width: 92%;
+    height: auto;
+}
+
+#form-registro div{
+    font-size: 90%;
+    text-align: left;
+}
+
+#div-buscar_submit{
+    text-align: center !important;
+}
+
+#div-cancelar-guardar_actualizacion{
+    text-align: center !important;
+}
+
+#cancelar_actualizacion{
+    float: bottom;
+    width: fit-content !important;
+    height: 35px;
+    margin-right: 1em;
+}
+
+#guardar_actualizacion{
+    position: relative;
+    width: fit-content !important;
+    height: 35px;
+    margin-left: 1em;
+}
+
+#div-cancelar-guardar_registro{
+    text-align: center !important;
+}
+
+#cancelar_registro{
+    float: bottom;
+    width: fit-content !important;
+    height: 35px;
+    margin-right: 1em;
+}
+
+#guardar_registro{
+    position: relative;
+    width: fit-content !important;
+    height: 35px;
+    margin-left: 1em;
+}

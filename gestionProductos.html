@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DIMA - Gestión de los productos</title>
+    <link type="text/css" rel="stylesheet" href="gestionProductos.css">
+</head>
+
+<body>
+
+    <!--Título-->
+    <div id="div-titulo_principal">
+        <h1>Gestión de productos</h1>
+    </div>  
+
+
+    <!--Registrar Producto-->
+    <section id="seccion-registrar">
+        <div id="div-registro">
+            <div>
+                <h2>Registrar un producto</h2>
+            </div>
+            <form id="form-registro">
+                <div id="div-registrar_id">
+                    <label for="registrar_id">Id:</label><br>
+                    <input id="registrar_id" class="input_registrar" name="registrar_id" type="number" placeholder="Ingrese la id del producto" required>
+                </div><br>
+                <div id="div-registrar_descripcion">
+                    <label for="registrar_descripcion">Descripción:</label><br>
+                    <input id="registrar_descripcion" class="input_registrar" name="registrar_descripcion" type="text" placeholder="Ingrese la descripción" required>
+                </div><br>
+                <div id="div-registrar_valor">
+                    <label for="registrar_valor">Valor unitario:</label><br>
+                    <input id="registrar_valor" class="input_registrar" name="registrar_valor" type="number" placeholder="Ingrese el valor unitario" required>
+                </div><br>
+                <div id="div-registrar_estado">
+                    <label for="registrar_estado">Estado:</label><br>
+                    <select id="registrar_estado" class="menu_desplegable" name="registrar_estado" required>
+                        <option value="disponible">Disponible</option>
+                        <option value="no_disponible">No disponible</option>
+                    </select>
+                </div><br>
+                <div id="div-cancelar-guardar_registro">
+                    <input id="cancelar_registro" class="submit_button" name="cancelar_registro" type="submit" value="cancelar">
+                    <input id="guardar_registro" class="submit_button" name="guardar_registro" type="submit" value="guardar">
+                </div>
+            </form>
+        </div">
+    </section>
+
+    <!--Buscar Producto-->
+    <section id="seccion-busqueda">
+        <div id="div-busqueda">
+            <div>
+                <h2>Buscar un producto</h2>
+            </div>
+            <form id="form-busqueda">
+                <div id="div-id_buscar">
+                    <label for="id_buscar">Ingresar Id:</label>
+                    <input id="id_buscar" class="input_buscar" name="id_buscar" type="number"><br>
+                </div>
+                <div id="div-descripcion_buscar">
+                    <label for="descripcion_buscar">Ingresar descripción: </label>
+                    <input id="descripcion_buscar" class="input_buscar" name="descripcion_buscar" type="text"><br>
+                </div>
+                <div id="div-buscar_submit">
+                    <input id="buscar_submit" class="submit_button" name="buscar_submit" type="submit" value="Buscar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--Ver Producto-->
+    <section id="seccion-ver_actualizar">
+        <div id="div-ver_producto">
+            <div>
+                <h3>Ver Producto</h3>
+            </div>
+            <form id="form-ver">
+                <div id="div-ver_id">
+                    <label for="ver_id">Id del producto:</label>
+                    <input id="ver_id" class="input_ver" name="ver_id" type="number" placeholder="aqui va la id" disabled>
+                </div><br>
+                <div id="div-ver_descripcion">
+                    <label for="ver_descripcion">Descripción:</label>
+                    <input id="ver_descripcion" class="input_ver" name="ver_descripcion" type="text" placeholder="aqui va la descripcion" disabled>
+                </div><br>
+                <div id="div-ver_valor">
+                    <label for="ver_valor">Valor unitario:</label>
+                    <input id="ver_valor" class="input_ver" name="ver_valor" type="number" placeholder="aqui va el valor $" disabled>
+                </div><br>
+                <div id="div-ver_estado">
+                    <label for="ver_estado">Estado: </label>
+                    <select id="ver_estado" class="menu_desplegable" name="ver_estado" disabled>
+                        <option value="disponible">Disponible</option>
+                        <option value="no_disponible">No disponible</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        
+        <!--Actualizar Producto-->
+        <div id="div-actualizar_producto">
+            <div>
+                <h3>Actualizar Producto</h3>
+            </div>
+            <form id="form-actualizar">
+                <div id="div-actualizar_id">
+                    <label for="actualizar_id">Id del producto:</label>
+                    <input id="actualizar_id" class="input_actualizar" name="actualizar_id" type="number" placeholder="aqui va la id" disabled>
+                </div><br>
+                <div id="div-actualizar_descripcion">
+                    <label for="actualizar_descripcion">Descripción:</label>
+                    <input id="actualizar_descripcion" class="input_actualizar" name="actualizar_descripcion" type="text" placeholder="aqui va la descripcion" required>
+                </div><br>
+                <div id="div-actualizar-valor">
+                    <label for="actualizar_valor">Valor unitario:</label>
+                    <input id="actualizar_valor" class="input_actualizar" name="actualizar_valor" type="number" placeholder="aqui va el valor $" required>
+                </div><br>
+                <div id="div-actualizar_estado">
+                    <label for="actualizar_estado">Estado:</label>
+                    <select id="actualizar_estado" class="menu_desplegable" name="actualizar_estado" required>
+                        <option value="disponible">Disponible</option>
+                        <option value="no_disponible">No disponible</option>
+                    </select>
+                </div><br>
+                <div id="div-cancelar-guardar_actualizacion">
+                    <input id="cancelar_actualizacion" class="submit_button" name="cancelar_actualizacion" type="submit" value="cancelar">
+                    <input id="guardar_actualizacion" class="submit_button" name="guardar_actualizacion" type="submit" value="guardar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--DIV plantilla-->
+    <div id="div-plantilla-izquierda"></div>
+    <div id="div-plantilla-arriba"></div>
+</body>
+
+</html>
