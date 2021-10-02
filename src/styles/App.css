@@ -1,0 +1,249 @@
+
+/*Aqui Agrege todos mis stilos */
+body{
+  background-color: rgb(255, 255, 255);
+}
+#btnNuevoUsuario{
+  background-color: rgb(61, 167, 61);
+  border-radius: 10px;
+  padding: 10px;
+  color: aliceblue;
+  margin-top: 1px;
+  
+}
+#btnNuevoUsuario:hover{
+  cursor: pointer;
+  background-color: green;
+  transition:  0.4s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
+  float:left;
+}
+#gu{
+  padding: 4px;
+}
+#contenedorBTN{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  margin: 4px;
+  padding: 5px;
+  justify-content: space-between;
+  display:flex;
+}
+
+#contenedor{
+  border: 1px solid;
+  padding: 4px;
+  margin: 4px;
+}
+#tbodyUsuarios{
+  background-color: rgb(182, 179, 179);
+  font-size: small;
+}
+
+th{
+  border: 1px solid rgb(0, 0, 0);
+}
+td{
+  text-align: center;
+  margin:1px;
+}
+.textCenter{
+  text-align: center;
+}
+.btnAgregarEliminar{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.1rem;
+}
+.editarUsuario{
+  border-radius: 5px;
+}
+.editarUsuario:hover{
+  transition: box-hsadow 0.4s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(73, 73, 73, 0.95);
+}
+.eliminarUsuario{
+  border-radius: 5px;
+}
+.eliminarUsuario:hover{
+  transition: box-hsadow 0.4s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(94, 94, 94, 0.95);
+}
+#tablaUsuarios{
+  width: 100%;
+  border: 1px solid;
+  padding: 4px;
+}
+
+.dima-logo{
+  height: 40px;
+  margin-top: 5%;
+}
+.dima-logo:hover {
+  transition: box-hsadow 0.4s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
+  cursor: pointer;
+}
+
+.menu-icons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu-channel-icon {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #AAA;
+}
+.menu-channel-icon:hover{
+  transition: box-hsadow 0.5s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
+  cursor: pointer;
+}
+
+.header {
+  background-color: #AAA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+#abrirBarra{
+  cursor: pointer;
+  font-size: 150%;
+  padding: 1%;
+}
+#abrirBarra:hover{
+  color: rgb(255, 253, 253);
+  transition: 0.5s ease;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 2rem 0 4rem;
+  margin-top: 8px;
+}
+
+.search-input {
+  width: 50%;
+  font-size: inherit;
+  padding: .4em;
+  border: 1px solid #777;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border: 1px solid #777;
+  background-color: #F8F8F8;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+.search-btn:hover{
+  transition: box-hsadow 0.5s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #F0F0F0;
+}
+.barraIzquierda a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #141414;
+  display: block;
+  transition: 0.3s;
+  -webkit-text-stroke: 0.5px black;
+  transition: 0.5s ease;
+
+}
+
+.barraIzquierda a:hover{
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.xBarra {
+  position: absolute;
+  top: 1%;
+  right: 25px;
+  margin-left: 50px;
+}
+.x{
+  position: absolute;
+  top: 1%;
+  right: 25px;
+  margin-left: 50px;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #141414;
+  display: block;
+  -webkit-text-stroke: 0.5px black;
+  
+}
+.x:hover{
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.barraIzquierda {
+  background-color: rgb(97, 96, 96);
+  z-index: 1;
+  padding-top: 100px;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+.barraIzquierda.active {
+  left: 0;
+  transition: 0.5s ease;
+}
+
+footer {
+  padding: 20px;
+  background-color: #AAA;
+  border: #111 solid 1px;
+  overflow:hidden ;
+}
+.footerIzquierda{
+  float: left;
+  overflow:hidden ;
+  margin-left: 10%;
+}
+
+.cssAgregarNuevoUsuario{
+  background-color: rgb(134, 133, 133);
+  border-radius:10px;
+  margin-left: 20%;
+  position: fixed;
+  transition: 0;
+  width: 50%;
+  left: -100%;
+  
+}
+.cssAgregarNuevoUsuario.active {
+  left: 0;
+}
+#fanu{
+  padding: 20px;
+}
+
+
