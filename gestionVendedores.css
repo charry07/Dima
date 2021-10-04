@@ -1,8 +1,20 @@
 table, th, td {
-    border: 1px solid black;
+
+    border-width: 1px;
+    padding: 6px;
     border-collapse: collapse;
-    border-width: 1px;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
 }
+
+td {
+    border-bottom: 1px solid rgb(135, 145, 142); 
+   
+}
+
+
+
+
 
 table {
     width: 75%;
@@ -10,7 +22,6 @@ table {
     top: 150px;
     right: 30px;
     width: 1500px;
-
 }
 
 thead {
@@ -21,22 +32,26 @@ thead {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: 5px;
+
 }
    
 tbody{
-    text-align: left;
+    text-align: center;
     height: 20px;  
+    
 }
 tr:hover {background-color: rgba(16, 182, 149, 0.205);
     color:rgb(0, 45, 87)
 }
 
+
+
 .field {
+  
   display:flex;
   position:absolute;
   margin:5em auto;
-  width:12.5%;
+  width:13.3%;
   top: 35px;
   right: 30px;
   flex-direction:row;
@@ -49,6 +64,16 @@ tr:hover {background-color: rgba(16, 182, 149, 0.205);
    5px 5px 0 rgb(22, 160, 133),
    6px 6px 0 rgb(22, 160, 133)
   ;
+  
+}
+
+.search{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.submit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .codigo {
@@ -58,11 +83,19 @@ tr:hover {background-color: rgba(16, 182, 149, 0.205);
     width: 6%;
 }
 .cliente {
-    width: 30%;
+    width: 25%;
+}
+.telefonCliente {
+    width: 12%;
 }
 .vendedor {
-    width: 30%;
+    width: 25%;
 }
+
+.telefonVendedor {
+    width: 12%;
+}
+
 .total{
     width: 6%;
 }
@@ -70,5 +103,10 @@ tr:hover {background-color: rgba(16, 182, 149, 0.205);
     width: 6%;
 }
 .opciones{
-    width: 12%;
+    width: 6%;
+}
+
+.editar{
+    width: 20px;
+    height: 20px;
 }

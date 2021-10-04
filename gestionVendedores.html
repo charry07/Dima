@@ -8,8 +8,8 @@
 <body>
   <div class="field" id="searchform">
     <span class="icon"><i class="fa fa-search"></i></span>
-    <input type="search" id="search" placeholder="Codigo, Fecha, Nombre..." />
-    <input type="Submit" value="Buscar">
+    <input type="search" class="search" id="search" placeholder="Codigo, Fecha, Nombre..." />
+    <input type="Submit" class="submit" value="Buscar">
   </div>
       
   <div2>
@@ -19,7 +19,9 @@
             <th class="codigo">Codigo</th>
             <th class="fecha">Fecha</th>
             <th class="cliente">Cliente</th>
+            <th class="telefonoCliente">Telefono Cliente</th>
             <th class="vendedor">Vendedor</th>
+            <th class="telefonoVendedor">Telefono Vendedor</th>
             <th class="total">Total</th>
             <th class="estado">Estado</th>
             <th class="opciones">Opciones</th>
@@ -27,579 +29,801 @@
         </thead>
       <tbody>  
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>201520630</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>0401235984256</td>
+            <td>27/09/2021</td>
+            <td>Juan Sebastian Rodriguez Diaz</td>
+            <td>3221546982</td>
+            <td>Mayra Alejandra Moreno Villanueva</td>
+            <td>3219765179</td>
+            <td>201520630</td>
+            <td>Pendiente</td>
+            <td>
+              <a href="default.asp">
+              <img src="/Images/editar.png" alt="editar" class="editar">
+              </a>
+              </td>
+              
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>0401235984256</td>
+            <td>27/09/2021</td>
+            <td>El Pepe</td>
+            <td></td>
+            <td>Juanita</td>
+            <td></td>
+            <td>150000</td>
+            <td>Pendiente</td>
+            <td></td>
           </tr>
           <tr>
-            <th>04012626257</th>
-            <th>14/09/2020</th>
-            <th>La Pepa</th>
-            <th>Juanito</th>
-            <th>1650000</th>
-            <th>Entregado</th>
-            <th></th>
+            <td>04012626257</td>
+            <td>14/09/2020</td>
+            <td>La Pepa</td>
+            <td></td>
+            <td>Juanito</td>
+            <td></td>
+            <td>1650000</td>
+            <td>Entregado</td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepo</th>
-            <th>Juaneto</th>
-            <th>35120</th>
-            <th>Cancelado</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
-          </tr>
-          <Var></Var>
-          <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
-          </tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
-          </tr><tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th>0401235984256</th>
-            <th>27/09/2021</th>
-            <th>El Pepe</th>
-            <th>Juanita</th>
-            <th>150000</th>
-            <th>Pendiente</th>
-            <th></th>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
 
         </tbody>
