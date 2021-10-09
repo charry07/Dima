@@ -6,8 +6,11 @@ import TablaUsuarios from './components/TablaUsuarios'
 import Cabezera from './components/Cabezera'
 import BarraBusqueda from './components/BarraBusqueda';
 import Footer from './components/Footer'
+import jsonn from './datosUsuariosJSON.json'
 
 function App() {
+
+  const datosUsuarios = jsonn /* mis datos en JSON*/
   return (
     <body className="appBody">
       <header>
@@ -21,7 +24,7 @@ function App() {
           <h3 id="gu">Gestion Usuarios</h3>
         </div>
         <div>
-          <TablaUsuarios/>
+          <TablaUsuarios datosUsuarios={datosUsuarios}/>
         </div>
       </div>
       <Footer/>

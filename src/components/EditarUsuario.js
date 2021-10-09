@@ -14,7 +14,7 @@ function EditarUsuario() {
             </div>
             <div className={EditarUsuario ? 'cssAgregarNuevoUsuario active' : 'cssAgregarNuevoUsuario' }>
                 <form id="fanu" >
-                    <a href="#" title="Cerrar" class="x" onClick={showEditarUsuario}>&times;</a>
+                    <a href="./index.html" title="Cerrar" class="x" onClick={showEditarUsuario}>&times;</a>
                     <FormularioNuevoUsuario/>
                 </form>
             </div>

@@ -14,8 +14,8 @@ function BtnNuevoUsuario() {
             </div>
             <div className={AgregarNuevoUsuario ? 'cssAgregarNuevoUsuario active' : 'cssAgregarNuevoUsuario' }>
                 <form id="fanu" >
-                    <a href="#" title="Cerrar" class="x" onClick={showAgregarNuevoUsuario}>&times;</a>
-                    <FormularioNuevoUsuario/>
+                    <p title="Cerrar" class="x" onClick={showAgregarNuevoUsuario}>&times;</p>
+                    <FormularioNuevoUsuario />
                 </form>
             </div>
         </>

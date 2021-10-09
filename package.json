@@ -1,21 +1,28 @@
 {
-  "name": "react-js",
+  "name": "dima",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "bootstrap": "^5.1.1",
+    "bootstrap": "^5.1.2",
+    "express": "^4.17.1",
     "formik": "^2.2.9",
+    "jsonserver": "^0.1.6",
     "latest": "^0.2.0",
+    "mongoose": "^6.0.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "reactstrap": "^8.10.0",
+    "server.js": "^1.0.0",
+    "web-vitals": "^1.1.2",
+    "write-json-file": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import reciclaje from '../images/reciclaje.svg'
-import {useState} from 'react'
+
 
 
 function EliminarUsuario() {

@@ -18,11 +18,11 @@ function Cabezera() {
                 
                 <nav className={AbrirBarraI ? 'barraIzquierda active' : 'barraIzquierda'}>
                     <div id="barraLateralIquierdaID" >
-                        <a href="#" title="Cerrar" class="xBarra" onClick={showAbrirBarraI}>&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
+                        <p title="Cerrar" class="x" onClick={showAbrirBarraI}>&times;</p>
+                        <a href="./index.html">About</a>
+                        <a href="./index.html">Services</a>
+                        <a href="./index.html">Clients</a>
+                        <a href="./index.html">Contact</a>
                     </div>
                 </nav>
 
@@ -32,13 +32,13 @@ function Cabezera() {
                 
                 
                 <div class="menu-icons">
-                    {/* <a href="#">
+                    {/* <a href="./index.html">
                         <img src="apps.svg" alt="Apps" />
                     </a> */}
-                    <a href="#" title="Notificaciones">
+                    <a href="./index.html" title="Notificaciones">
                         <img id="notificaciones" src={notificaciones} alt="Notificaciones" />
                     </a>
-                    <a href="#" title="Perfil">
+                    <a href="./index.html" title="Perfil">
                         <img   class="menu-channel-icon" src={fotoPerfil} alt="Your Channel" />
                     </a>
                 </div>

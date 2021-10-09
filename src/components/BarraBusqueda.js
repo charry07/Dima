@@ -7,7 +7,7 @@ function BarraBusqueda() {
             <form class="search-bar">
                 <input class="search-input" type="search" placeholder="Buscar" aria-label="Buscar" />
                 <button type="submit" class="search-btn">
-                <img src={lupa} />
+                <img src={lupa} alt="lupa" />
                 </button>
             </form>
         </div>

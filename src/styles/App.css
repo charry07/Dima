@@ -35,6 +35,7 @@ body{
   padding: 4px;
   margin: 4px;
 }
+
 #tbodyUsuarios{
   background-color: rgb(182, 179, 179);
   font-size: small;
@@ -192,6 +193,7 @@ td{
   color: #141414;
   display: block;
   -webkit-text-stroke: 0.5px black;
+  cursor: pointer;
   
 }
 .x:hover{
@@ -237,6 +239,7 @@ footer {
   transition: 0;
   width: 50%;
   left: -100%;
+  transition: 0.2s ease;
   
 }
 .cssAgregarNuevoUsuario.active {
