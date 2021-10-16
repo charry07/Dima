@@ -1,8 +1,9 @@
 import React from 'react'
 import {useState} from 'react'
 import LogoDima from '../images/LogoDima.png'
-import fotoPerfil from '../images/fotoPerfil.jpg'
+// import fotoPerfil from '../images/fotoPerfil.jpg'
 import notificaciones from '../images/Notificaciones.svg'
+import Login from './Login'
 
 
 
@@ -30,7 +31,6 @@ function Cabezera() {
                     <img src={LogoDima} alt="Logo DiMA" className="dima-logo" />
                 </a>
                 
-                
                 <div className="menu-icons">
                     {/* <a href="./index.html">
                         <img src="apps.svg" alt="Apps" />
@@ -38,9 +38,10 @@ function Cabezera() {
                     <a href="./index.html" title="Notificaciones">
                         <img id="notificaciones" src={notificaciones} alt="Notificaciones" />
                     </a>
-                    <a href="./index.html" title="Perfil">
+                    {/* <a href="./index.html" title="Perfil">
                         <img   className="menu-channel-icon" src={fotoPerfil} alt="Your Channel" />
-                    </a>
+                    </a> */}
+                    <Login/>
                 </div>
                     
             </header>

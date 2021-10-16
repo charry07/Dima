@@ -5,7 +5,10 @@ const app = express();
 const path = require('path');
 const mongoose = require('./database');
 
-app.use(cors());
+
+
+
+
 
 
 // settings
@@ -14,9 +17,12 @@ app.set('port', process.env.PORT || 5000)
 //funciones antes de rutas (Middlewares)
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors());
+
 
 // Routes
 app.use('/usuarios',require('./routes/usuariosRoutes'));
+app.use('/auth',require('./routes/authRoute'));//Autentificacion
 
 
 // archivos estaticos (static files)

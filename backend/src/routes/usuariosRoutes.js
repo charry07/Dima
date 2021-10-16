@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const cors = require('cors');
 const app = express();
+const jwt = require('jsonwebtoken');
 
 
 const userModel = require('../models/userModel')
@@ -9,6 +10,20 @@ const userModel = require('../models/userModel')
 
 app.use(cors());
 app.use(express.json());
+
+
+router.use((req,res, next) => {
+    const {token} = req.headers;
+    jwt.verify(token,'miClave',function(err,decoded) {
+        if (err) {
+            console.log('Hubo un Error, Verificar el token');
+            res.status(401).send('No Autorizado!');
+            return;
+        }
+        console.log(decoded);
+        next();
+    });
+});
 
 
 

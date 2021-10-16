@@ -25,8 +25,11 @@ export class App extends React.Component {
     this.onClearUser = this.onClearUser.bind(this);
     this.onSaveUser = this.onSaveUser.bind(this);
   }
+
   componentDidMount() {
-    axios.get(this.URL_datosUsuarios).then((resp) => {
+    axios.get(this.URL_datosUsuarios,{
+      headers:{ 'token': sessionStorage.getItem('token')}
+    }).then((resp) => {
       console.log('Respuesta de listar Usuarios');
       console.log(resp.data);
       this.setState({usuarios:resp.data });
@@ -47,7 +50,8 @@ export class App extends React.Component {
   
     onDeleteUser(usuarioId) {
       console.log('quiero eliminar un usuario', usuarioId);
-      axios.delete(`${this.URL_datosUsuarios}/${usuarioId}`).then(data => {
+      axios.delete(`${this.URL_datosUsuarios}/${usuarioId}`,
+      {headers:{ 'token': sessionStorage.getItem('token')}}).then(data => {
         this.setState((state, props) => ({
           usuarios: this.state.usuarios.filter(st => st._id !== usuarioId),
           selectedUsuario: this.emptyUsuario
@@ -71,7 +75,8 @@ export class App extends React.Component {
       }
       if (this.state.selectedUsuario._id === -1) {
         console.log('vamos a hacer un POST', this.state.selectedUsuario);
-        axios.post(this.URL_datosUsuarios, { ...usuario, _id: null }).then((resp) => {
+        axios.post(this.URL_datosUsuarios, { ...usuario, _id: null } , 
+          {headers:{ 'token': sessionStorage.getItem('token')}}).then((resp) => {
           console.log('Todo bien con el post', resp);
           this.setState((state, props) => ({
             usuarios: [...state.usuarios, resp.data],
@@ -82,7 +87,8 @@ export class App extends React.Component {
         });
       } else {
         console.log('vamos a hacer un PUT', this.state.selectedUsuario);
-        axios.put(`${this.URL_datosUsuarios}/${usuario._id}`, { ...usuario }).then((resp) => {
+        axios.put(`${this.URL_datosUsuarios}/${usuario._id}`, { ...usuario },
+          {headers:{ 'token': sessionStorage.getItem('token')}}).then((resp) => {
           console.log('Todo bien con el put', resp);
           this.setState((state, props) => ({
             usuarios: state.usuarios.map(st => st._id === usuario._id ? usuario : st),

@@ -35,3 +35,10 @@ content-type: application/json
     "email": "charry072031@gmail.com.com",
     "ingreso": "960410" 
 }
+
+###
+POST {{urlBase}}/auth/google HTTP/1.1
+content-type: application/json 
+{
+    
+}
