@@ -5,9 +5,7 @@ import reciclaje from '../images/reciclaje.svg'
 
 function EliminarUsuario() {
     return (
-        <div>
-            <button class="eliminarUsuario"><img src={reciclaje} alt="basura" width="15px"/></button>
-        </div>
+        <button className="eliminarUsuario" ><img src={reciclaje} alt="basura" width="15px"/></button>
     )
 }
 

@@ -9,15 +9,12 @@ function EditarUsuario() {
 
     return (
         <>
-            <div>
-                <button onClick={showEditarUsuario} className="editarUsuario"><img src={lapiz} alt="lapiz" width="15px"/></button>
+            <button onClick={showEditarUsuario} className="editarUsuario"><img src={lapiz} alt="lapiz" width="15px"/></button>
+            <div id="fanu" className={EditarUsuario ? 'cssAgregarNuevoUsuario active' : 'cssAgregarNuevoUsuario'}>
+                <a href="./index.html" title="Cerrar" className="x" onClick={showEditarUsuario}>&times;</a>
+                <FormularioNuevoUsuario/>
             </div>
-            <div className={EditarUsuario ? 'cssAgregarNuevoUsuario active' : 'cssAgregarNuevoUsuario' }>
-                <form id="fanu" >
-                    <a href="./index.html" title="Cerrar" class="x" onClick={showEditarUsuario}>&times;</a>
-                    <FormularioNuevoUsuario/>
-                </form>
-            </div>
+            
         </>
     )
 }

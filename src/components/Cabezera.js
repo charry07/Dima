@@ -13,12 +13,12 @@ function Cabezera() {
     
     return (
         <>
-            <header id="header" class="header">
+            <header id="header" className="header">
                 <span title="Opciones" id="abrirBarra" onClick={showAbrirBarraI} >&#9776; </span>
                 
                 <nav className={AbrirBarraI ? 'barraIzquierda active' : 'barraIzquierda'}>
                     <div id="barraLateralIquierdaID" >
-                        <p title="Cerrar" class="x" onClick={showAbrirBarraI}>&times;</p>
+                        <p title="Cerrar" className="x" onClick={showAbrirBarraI}>&times;</p>
                         <a href="./index.html">About</a>
                         <a href="./index.html">Services</a>
                         <a href="./index.html">Clients</a>
@@ -27,11 +27,11 @@ function Cabezera() {
                 </nav>
 
                 <a href="./index.html">
-                    <img src={LogoDima} alt="Logo DiMA" class="dima-logo" />
+                    <img src={LogoDima} alt="Logo DiMA" className="dima-logo" />
                 </a>
                 
                 
-                <div class="menu-icons">
+                <div className="menu-icons">
                     {/* <a href="./index.html">
                         <img src="apps.svg" alt="Apps" />
                     </a> */}
@@ -39,7 +39,7 @@ function Cabezera() {
                         <img id="notificaciones" src={notificaciones} alt="Notificaciones" />
                     </a>
                     <a href="./index.html" title="Perfil">
-                        <img   class="menu-channel-icon" src={fotoPerfil} alt="Your Channel" />
+                        <img   className="menu-channel-icon" src={fotoPerfil} alt="Your Channel" />
                     </a>
                 </div>
                     

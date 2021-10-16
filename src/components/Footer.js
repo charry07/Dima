@@ -5,20 +5,14 @@ function Footer() {
     return (
         <footer>
             <a href="./index.html">
-            <div>
-                <img class="footerIzquierda" src={LogoDimaCuadrado} alt="Logo dima" width="10%"/>
-            </div>
+                <img className="footerIzquierda" src={LogoDimaCuadrado} alt="Logo dima" width="10%"/>
             </a>
-    
-            <div>
-                <pre class="footerIzquierda">
-                    <b>Contacto : Charry072013@gmail.com</b> <br/>
-                    <b>Contacto : Charry072013@gmail.com</b> <br/>
-                    <b>Contacto : Charry072013@gmail.com</b> <br/>
-                    <b>Contacto : Charry072013@gmail.com</b>
-                    
-                </pre>
-            </div>
+            <pre className="footerIzquierda">
+                <b>Contacto : Charry072013@gmail.com</b> <br/>
+                <b>Contacto : Charry072013@gmail.com</b> <br/>
+                <b>Contacto : Charry072013@gmail.com</b> <br/>
+                <b>Contacto : Charry072013@gmail.com</b>
+            </pre>
         </footer>
     )
 }

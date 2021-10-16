@@ -1,31 +1,37 @@
 @urlBase = http://localhost:5000
 
-GET {{urlBase}}/students/ HTTP/1.1
+GET {{urlBase}}/usuarios/ HTTP/1.1
 ###
 
-GET http://localhost:5000/students/615d29d332e23f3142294a08 HTTP/1.1
+GET {{urlBase}}/usuarios/61685f2bdb1621296c3f500d HTTP/1.1
 ###
 
-POST http://localhost:5000/students HTTP/1.1
+POST {{urlBase}}/usuarios HTTP/1.1
 content-type: application/json
 
 {
-    "dni": 101001,
-    "name": "Jota Jota Pelaez",
-    "age": 56,
-    "semester": 3
+    "dni": 1035918779,
+    "nombre": "Anderson",
+    "apellido": "Charry",
+    "rol": "ADMIN",
+    "celular": 31477818132,
+    "email": "CHARRY072013@gmail.com",
+    "ingreso": "04101996" 
 }
 ###
 
-DELETE {{urlBase}}/students/615d29d332e23f3142294a08
+DELETE {{urlBase}}/usuarios/43469
 
 ###
-PUT http://localhost:5000/students/615e4ada0d87fddf07402cc3
+PUT {{urlBase}}/usuarios/5469
 content-type: application/json
 
 {
-    "dni": 546589,
-    "name": "Juan Manuel Cuervo",
-    "age": 16,
-    "semester": 3
+    "dni": 5469,
+"nombre": "Anderson",
+    "apellido": "Charry",
+    "rol": "ADMIN",
+    "celular": 3147781832,
+    "email": "charry072031@gmail.com.com",
+    "ingreso": "960410" 
 }

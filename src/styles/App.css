@@ -36,28 +36,32 @@ body{
   margin: 4px;
 }
 
-#tbodyUsuarios{
-  background-color: rgb(182, 179, 179);
-  font-size: small;
+#tablaUsuarios{
+  width: 100%;
+  border: 1px solid;
+  padding: 4px;
+  text-align: center;
 }
-
-th{
-  border: 1px solid rgb(0, 0, 0);
+#tbodyUsuarios{
+  background-color: rgb(184, 184, 184);
+  font-size: smaller;
 }
 td{
-  text-align: center;
-  margin:1px;
+  border: 1px solid blanchedalmond;
 }
+
 .textCenter{
   text-align: center;
 }
 .btnAgregarEliminar{
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 0.1rem;
+  align-items: center;
+  gap: 0rem;
 }
 .editarUsuario{
   border-radius: 5px;
+  width: 30px;
 }
 .editarUsuario:hover{
   transition: box-hsadow 0.4s ease;
@@ -65,17 +69,12 @@ td{
 }
 .eliminarUsuario{
   border-radius: 5px;
+  width: 30px;
 }
 .eliminarUsuario:hover{
   transition: box-hsadow 0.4s ease;
   box-shadow: 0 0.1em 0.4rem rgba(94, 94, 94, 0.95);
 }
-#tablaUsuarios{
-  width: 100%;
-  border: 1px solid;
-  padding: 4px;
-}
-
 .dima-logo{
   height: 40px;
   margin-top: 5%;
@@ -222,13 +221,13 @@ td{
 footer {
   padding: 20px;
   background-color: #AAA;
-  border: #111 solid 1px;
   overflow:hidden ;
 }
 .footerIzquierda{
   float: left;
   overflow:hidden ;
   margin-left: 10%;
+  font-size: smaller;
 }
 
 .cssAgregarNuevoUsuario{
