@@ -16,13 +16,16 @@ export class Login extends React.Component{
 
     render(){
         return(
-            <GoogleLogin
-                clientId="468523678912-tai2ck20l69crdn139f6vulb5d27ruhu.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}
-                cookiePolicy={'single_host_origin'}
-            />
+            <div className="Login">
+                <GoogleLogin 
+                    clientId="468523678912-tai2ck20l69crdn139f6vulb5d27ruhu.apps.googleusercontent.com"
+                    buttonText="Log In"
+                    onSuccess={this.responseGoogle}
+                    onFailure={this.responseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
+            </div>
+            
         )
     }
 }

@@ -2,12 +2,13 @@ import './styles/App.css';
 import React from 'react';
 
 // importar mis componentes
-import BtnNuevoUsuario from './components/BtnNuevoUsuario'
+import FormularioNewUser from './components/FormularioNewUser'
 import TablaUsuarios from './components/TablaUsuarios'
 import Cabezera from './components/Cabezera'
 import BarraBusqueda from './components/BarraBusqueda';
 import Footer from './components/Footer'
 import axios from 'axios';
+
 
 
 export class App extends React.Component {
@@ -18,12 +19,24 @@ export class App extends React.Component {
     this.state = {
       usuarios: [],
       selectedUsuario: this.emptyUsuario,
+      abrirContenido: false
     };
+
     this.onFormChange = this.onFormChange.bind(this);
     this.onEditUser = this.onEditUser.bind(this);
     this.onDeleteUser = this.onDeleteUser.bind(this);
     this.onClearUser = this.onClearUser.bind(this);
     this.onSaveUser = this.onSaveUser.bind(this);
+    this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
+  }
+
+  showFormNuevoUsuario () {
+    if (this.state.abrirContenido === true) {
+        this.setState({abrirContenido: false})
+    }
+    else {
+        this.setState({abrirContenido: true})
+    }
   }
 
   componentDidMount() {
@@ -44,6 +57,7 @@ export class App extends React.Component {
     }
   
     onEditUser(usuario) {
+      this.showFormNuevoUsuario();
       console.log('quiero editar un usuario', usuario);
       this.setState({ selectedUsuario: usuario });
     }
@@ -98,7 +112,9 @@ export class App extends React.Component {
           console.log('error al hacer post', err);
         });
       }
-  }
+      this.showFormNuevoUsuario();
+    }
+
   render() {
     return (
       <div className="appBody">
@@ -106,18 +122,24 @@ export class App extends React.Component {
         <div id="contenedor">
           <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
           <div id="contenedorBTN">
-            <BtnNuevoUsuario 
+            <FormularioNewUser 
               usuario={this.state.selectedUsuario}
+              abrirContenido={this.state.abrirContenido}
+              showFormNuevoUsuario={this.showFormNuevoUsuario}
               onFormChange={this.onFormChange}
               onClearUser={this.onClearUser}
               onSaveUser={this.onSaveUser}
+              onEditUser={this.onEditUser}
               />
             
             <BarraBusqueda/>
+            
             <h3 id="gu">Gestion Usuarios</h3>
           </div>
           
-            <TablaUsuarios 
+            <TablaUsuarios                 
+              abrirContenido={this.state.abrirContenido}
+              showFormNuevoUsuario={this.showFormNuevoUsuario}
               usuarios={this.state.usuarios}
               onEditUser={this.onEditUser}
               onDeleteUser={this.onDeleteUser} 

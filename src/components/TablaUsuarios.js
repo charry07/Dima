@@ -7,7 +7,7 @@ export class TablaUsuarios extends React.Component {
         const usuarios = this.props.usuarios;
         const filaUsuarios = usuarios.map(user => {
             return (
-                <tr key={user.dni} >
+                <tr key={user._id} >
                     <td>{user.dni}</td>
                     <td>{user.nombre}</td>
                     <td>{user.apellido}</td>
@@ -16,7 +16,7 @@ export class TablaUsuarios extends React.Component {
                     <td>{user.email}</td>
                     <td>{user.ingreso}</td>
                     <td className="btnAgregarEliminar">
-                        <button className="editarUsuario" type="button" onClick={() => this.props.onEditUser(user)}><img src={lapiz} alt="lapiz" width="15px"/></button>
+                        <button className="editarUsuario" type="button" onClick={() => this.props.onEditUser(user)} ><img src={lapiz} alt="lapiz" width="15px"/></button>
                         <button className="eliminarUsuario" type="button" onClick={() => this.props.onDeleteUser(user._id)}><img src={reciclaje} alt="basura" width="15px"/></button>
                     </td>
                 </tr> 

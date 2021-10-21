@@ -4,7 +4,7 @@ body{
   background-color: rgb(255, 255, 255);
 }
 #btnNuevoUsuario{
-  background-color: rgb(61, 167, 61);
+  background-color: rgb(58, 148, 58);
   border-radius: 10px;
   padding: 10px;
   color: aliceblue;
@@ -231,21 +231,18 @@ footer {
 }
 
 .cssAgregarNuevoUsuario{
-  background-color: rgb(134, 133, 133);
+  background-color: rgb(170, 169, 169);
   border-radius:10px;
   margin-left: 20%;
   position: fixed;
-  transition: 0;
   width: 50%;
-  left: -100%;
-  transition: 0.2s ease;
-  
+  padding:20px;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
 }
-.cssAgregarNuevoUsuario.active {
-  left: 0;
+.Login:hover{
+  transition:  0.1s ease;
+  box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
 }
-#fanu{
-  padding: 20px;
-}
+
 
 
