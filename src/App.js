@@ -127,7 +127,6 @@ export class App extends React.Component {
   render() {
     return (
       <>
-        
         {sessionStorage.getItem('token')?(
           <div className="appBody" hidden={!this.state.abrirHome}>
             <Cabezera/>
