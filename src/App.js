@@ -8,6 +8,7 @@ import Cabezera from './components/Cabezera'
 import BarraBusqueda from './components/BarraBusqueda';
 import Footer from './components/Footer'
 import axios from 'axios';
+import Login from './components/Login'
 
 
 
@@ -15,7 +16,7 @@ export class App extends React.Component {
   constructor(props){
     super(props);
     this.URL_datosUsuarios = 'http://localhost:5000/usuarios'; /* mis datos en JSON*/
-    this.emptyUsuario = { _id: -1 , dni: '', nombre: '', apellido: '', rol: '', celular: '', email: '' , ingreso: ''};
+    this.emptyUsuario = { _id: -1 , dni: '', given_name: '', family_name: '', locale: '', exp: '', email: '' , ingreso: ''};
     this.state = {
       usuarios: [],
       selectedUsuario: this.emptyUsuario,
@@ -28,7 +29,10 @@ export class App extends React.Component {
     this.onClearUser = this.onClearUser.bind(this);
     this.onSaveUser = this.onSaveUser.bind(this);
     this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
+    this.contenido = this.contenido.bind(this);
+
   }
+  
 
   showFormNuevoUsuario () {
     if (this.state.abrirContenido === true) {
@@ -115,38 +119,50 @@ export class App extends React.Component {
       this.showFormNuevoUsuario();
     }
 
+    contenido () {
+      if(sessionStorage.getItem('token')) {
+        (
+          <div className="appBody">
+            <Cabezera/>
+            <div id="contenedor">
+              <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
+              <div id="contenedorBTN">
+                <FormularioNewUser 
+                  usuario={this.state.selectedUsuario}
+                  abrirContenido={this.state.abrirContenido}
+                  showFormNuevoUsuario={this.showFormNuevoUsuario}
+                  onFormChange={this.onFormChange}
+                  onClearUser={this.onClearUser}
+                  onSaveUser={this.onSaveUser}
+                  onEditUser={this.onEditUser}
+                  />
+                
+                <BarraBusqueda/>
+                {/* <Logout/> */}
+                
+                <h3 id="gu">Gestion Usuarios</h3>
+              </div>
+              
+                <TablaUsuarios                 
+                  abrirContenido={this.state.abrirContenido}
+                  showFormNuevoUsuario={this.showFormNuevoUsuario}
+                  usuarios={this.state.usuarios}
+                  onEditUser={this.onEditUser}
+                  onDeleteUser={this.onDeleteUser} 
+                />
+            </div>
+            <Footer/>
+          </div>
+        )}
+        else {(
+          <Login/>
+        )}
+      
+    }
+
   render() {
     return (
-      <div className="appBody">
-        <Cabezera/>
-        <div id="contenedor">
-          <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
-          <div id="contenedorBTN">
-            <FormularioNewUser 
-              usuario={this.state.selectedUsuario}
-              abrirContenido={this.state.abrirContenido}
-              showFormNuevoUsuario={this.showFormNuevoUsuario}
-              onFormChange={this.onFormChange}
-              onClearUser={this.onClearUser}
-              onSaveUser={this.onSaveUser}
-              onEditUser={this.onEditUser}
-              />
-            
-            <BarraBusqueda/>
-            
-            <h3 id="gu">Gestion Usuarios</h3>
-          </div>
-          
-            <TablaUsuarios                 
-              abrirContenido={this.state.abrirContenido}
-              showFormNuevoUsuario={this.showFormNuevoUsuario}
-              usuarios={this.state.usuarios}
-              onEditUser={this.onEditUser}
-              onDeleteUser={this.onDeleteUser} 
-            />
-        </div>
-        <Footer/>
-      </div>
+      this.contenido
     );
   }
 }

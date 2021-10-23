@@ -5,7 +5,7 @@ const JWT_KEY = 'miClave';
 const userModel = require('../models/userModel')
 
 googleAuth = (req,res) => {
-    console.log(req.headers,req.body ,req.params );
+    // console.log(req.headers,req.body ,req.params );
 
     const {token} = req.body;
     const client = new OAuth2Client(CLIENT_ID);
@@ -15,14 +15,18 @@ googleAuth = (req,res) => {
         audience: CLIENT_ID
     })
     .then(res => {
-        console.log(res);
-        const {name,email} = res.payload;
-        console.log(email,name);
+        // console.log(res);
+        const {email,given_name,family_name,iat,exp,locale} = res.payload;
+        //console.log(res.payload);
         //Actualizar base de datos
-        return userModel.findOneAndUpdate({email:email},{name:name},{new :true , upsert:true})
+        return userModel.findOneAndUpdate(
+            {email:email},
+            { $set: { nombre: given_name, apellido:family_name,dni:iat, celular:exp,rol:locale }},
+            {new: true, upsert:true},
+        )
     })
     .then(user => {
-        console.log(user);
+        
         //crear token de la aplicacion y retornar
         var appToken = jwt.sign({user: user},JWT_KEY);
         res.json(appToken);
