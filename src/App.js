@@ -29,8 +29,6 @@ export class App extends React.Component {
     this.onClearUser = this.onClearUser.bind(this);
     this.onSaveUser = this.onSaveUser.bind(this);
     this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
-    this.contenido = this.contenido.bind(this);
-
   }
   
 
@@ -119,50 +117,40 @@ export class App extends React.Component {
       this.showFormNuevoUsuario();
     }
 
-    contenido () {
-      if(sessionStorage.getItem('token')) {
-        (
-          <div className="appBody">
-            <Cabezera/>
-            <div id="contenedor">
-              <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
-              <div id="contenedorBTN">
-                <FormularioNewUser 
-                  usuario={this.state.selectedUsuario}
-                  abrirContenido={this.state.abrirContenido}
-                  showFormNuevoUsuario={this.showFormNuevoUsuario}
-                  onFormChange={this.onFormChange}
-                  onClearUser={this.onClearUser}
-                  onSaveUser={this.onSaveUser}
-                  onEditUser={this.onEditUser}
-                  />
-                
-                <BarraBusqueda/>
-                {/* <Logout/> */}
-                
-                <h3 id="gu">Gestion Usuarios</h3>
-              </div>
-              
-                <TablaUsuarios                 
-                  abrirContenido={this.state.abrirContenido}
-                  showFormNuevoUsuario={this.showFormNuevoUsuario}
-                  usuarios={this.state.usuarios}
-                  onEditUser={this.onEditUser}
-                  onDeleteUser={this.onDeleteUser} 
-                />
-            </div>
-            <Footer/>
-          </div>
-        )}
-        else {(
-          <Login/>
-        )}
-      
-    }
 
   render() {
     return (
-      this.contenido
+      <div className="appBody">
+        <Cabezera/>
+        <div id="contenedor">
+          <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
+          <div id="contenedorBTN">
+            <FormularioNewUser 
+              usuario={this.state.selectedUsuario}
+              abrirContenido={this.state.abrirContenido}
+              showFormNuevoUsuario={this.showFormNuevoUsuario}
+              onFormChange={this.onFormChange}
+              onClearUser={this.onClearUser}
+              onSaveUser={this.onSaveUser}
+              onEditUser={this.onEditUser}
+              />
+            
+            <BarraBusqueda/>
+            {/* <Logout/> */}
+            
+            <h3 id="gu">Gestion Usuarios</h3>
+          </div>
+          
+            <TablaUsuarios                 
+              abrirContenido={this.state.abrirContenido}
+              showFormNuevoUsuario={this.showFormNuevoUsuario}
+              usuarios={this.state.usuarios}
+              onEditUser={this.onEditUser}
+              onDeleteUser={this.onDeleteUser} 
+            />
+        </div>
+        <Footer/>
+      </div>
     );
   }
 }
