@@ -9,6 +9,7 @@ import BarraBusqueda from './components/BarraBusqueda';
 import Footer from './components/Footer'
 import axios from 'axios';
 import Login from './components/Login'
+import LogoDima from './images/LogoDima.png'
 
 
 
@@ -20,7 +21,8 @@ export class App extends React.Component {
     this.state = {
       usuarios: [],
       selectedUsuario: this.emptyUsuario,
-      abrirContenido: false
+      abrirContenido: false,
+      abrirHome:true
     };
 
     this.onFormChange = this.onFormChange.bind(this);
@@ -30,7 +32,11 @@ export class App extends React.Component {
     this.onSaveUser = this.onSaveUser.bind(this);
     this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
   }
-  
+  reload = () => {
+    if (sessionStorage.getItem('token')) {
+      window.location.reload(true);
+    }
+  }
 
   showFormNuevoUsuario () {
     if (this.state.abrirContenido === true) {
@@ -120,37 +126,51 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div className="appBody">
-        <Cabezera/>
-        <div id="contenedor">
-          <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
-          <div id="contenedorBTN">
-            <FormularioNewUser 
-              usuario={this.state.selectedUsuario}
-              abrirContenido={this.state.abrirContenido}
-              showFormNuevoUsuario={this.showFormNuevoUsuario}
-              onFormChange={this.onFormChange}
-              onClearUser={this.onClearUser}
-              onSaveUser={this.onSaveUser}
-              onEditUser={this.onEditUser}
-              />
-            
-            <BarraBusqueda/>
-            {/* <Logout/> */}
-            
-            <h3 id="gu">Gestion Usuarios</h3>
+      <>
+        
+        {sessionStorage.getItem('token')?(
+          <div className="appBody" hidden={!this.state.abrirHome}>
+            <Cabezera/>
+            <div id="contenedor">
+              <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>
+              <div id="contenedorBTN" >
+                <FormularioNewUser 
+                  usuario={this.state.selectedUsuario}
+                  abrirContenido={this.state.abrirContenido}
+                  showFormNuevoUsuario={this.showFormNuevoUsuario}
+                  onFormChange={this.onFormChange}
+                  onClearUser={this.onClearUser}
+                  onSaveUser={this.onSaveUser}
+                  onEditUser={this.onEditUser}
+                  />
+                
+                <BarraBusqueda/>
+                {/* <Logout/> */}
+                
+                <h3 id="gu">Gestion Usuarios</h3>
+              </div>
+              
+                <TablaUsuarios                 
+                  abrirContenido={this.state.abrirContenido}
+                  showFormNuevoUsuario={this.showFormNuevoUsuario}
+                  usuarios={this.state.usuarios}
+                  onEditUser={this.onEditUser}
+                  onDeleteUser={this.onDeleteUser} 
+                />
+            </div>
+            <Footer/>
           </div>
-          
-            <TablaUsuarios                 
-              abrirContenido={this.state.abrirContenido}
-              showFormNuevoUsuario={this.showFormNuevoUsuario}
-              usuarios={this.state.usuarios}
-              onEditUser={this.onEditUser}
-              onDeleteUser={this.onDeleteUser} 
-            />
-        </div>
-        <Footer/>
-      </div>
+        ):
+        (
+          <div id="contenedorInicioSeccion">
+            <img src={LogoDima} alt="Logo DiMA" id="LogoDimaInicioSeccion" />
+            <div id="iniciarSeccion">
+              <Login/>
+            </div>
+          </div>
+        )}
+        
+      </>
     );
   }
 }
