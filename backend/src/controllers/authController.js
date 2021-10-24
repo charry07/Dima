@@ -1,7 +1,7 @@
 const {OAuth2Client} = require('google-auth-library');
 const jwt = require('jsonwebtoken');
-const CLIENT_ID = '468523678912-tai2ck20l69crdn139f6vulb5d27ruhu.apps.googleusercontent.com';
-const JWT_KEY = 'miClave';
+const CLIENT_ID = process.env.CLIENT_ID;
+const JWT_KEY = process.env.JWT_KEY;
 const userModel = require('../models/userModel')
 
 googleAuth = (req,res) => {

@@ -6,7 +6,11 @@ const path = require('path');
 const mongoose = require('./database');
 
 
-
+if (process.env.NODE_ENV !== 'production'){
+    console.log('No esamos para Produccion');
+    require('dotenv').config();
+    console.log('process.env: ',process.env.PORT);
+}
 
 
 
