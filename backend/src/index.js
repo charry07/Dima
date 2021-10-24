@@ -7,9 +7,9 @@ const mongoose = require('./database');
 
 
 if (process.env.NODE_ENV !== 'production'){
-    console.log('No esamos para Produccion');
+    console.log('-->No estamos para Produccion<--');
     require('dotenv').config();
-    console.log('process.env: ',process.env.PORT);
+    // console.log('process.env: ',process.env);
 }
 
 

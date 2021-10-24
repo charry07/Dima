@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const CLIENT_ID = process.env.CLIENT_ID;
 const JWT_KEY = process.env.JWT_KEY;
 const userModel = require('../models/userModel')
+require('dotenv').config();
 
 googleAuth = (req,res) => {
     // console.log(req.headers,req.body ,req.params );

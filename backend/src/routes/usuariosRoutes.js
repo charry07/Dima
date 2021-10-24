@@ -14,9 +14,9 @@ app.use(express.json());
 
 router.use((req,res, next) => {
     const {token} = req.headers;
-    jwt.verify(token,'miClave',function(err,decoded) {
+    jwt.verify(token,process.env.JWT_KEY,function(err,decoded) {
         if (err) {
-            console.log('Hubo un Error, Verificar el token');
+            console.log('!!Hubo un Error!!,->Verifique el token');
             res.status(401).send('No Autorizado!');
             return;
         }
