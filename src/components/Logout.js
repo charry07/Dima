@@ -10,12 +10,15 @@ export class Logout extends React.Component{
     }
     render(){
         return(
-            <GoogleLogout
-                clientId="468523678912-tai2ck20l69crdn139f6vulb5d27ruhu.apps.googleusercontent.com"
-                buttonText="Logout"
-                onLogoutSuccess={this.removerToken}
-                >
-            </GoogleLogout>
+            <div id="logoutBTN">
+                <GoogleLogout
+                    clientId="468523678912-tai2ck20l69crdn139f6vulb5d27ruhu.apps.googleusercontent.com"
+                    buttonText="Logout"
+                    onLogoutSuccess={this.removerToken}
+                    >
+                </GoogleLogout>
+            </div>
+            
         )
     }
 }

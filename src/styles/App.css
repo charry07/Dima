@@ -1,14 +1,11 @@
 
 /*Aqui Agrege todos mis stilos */
-body{
-  background-color: rgb(255, 255, 255);
-}
 #btnNuevoUsuario{
   background-color: rgb(58, 148, 58);
   border-radius: 10px;
-  padding: 10px;
+  padding: 4%;
   color: aliceblue;
-  margin-top: 1px;
+  margin:5%;
   
 }
 #btnNuevoUsuario:hover{
@@ -18,6 +15,17 @@ body{
   box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
   float:left;
 }
+@media screen and (max-width: 330px) {
+  #gu{
+    font-size: medium;
+  }
+  #contenedorInicioSeccion{
+    width: 85%;
+  }
+  #LogoDimaInicioSeccion{
+    width: 99%;
+  }
+}
 #gu{
   padding: 4px;
 }
@@ -25,7 +33,7 @@ body{
   background-color: rgb(255, 255, 255);
   border: 1px solid;
   margin: 4px;
-  padding: 5px;
+  padding: 4px;
   justify-content: space-between;
   display:flex;
 }
@@ -123,6 +131,7 @@ td{
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem;
+  position:relative;
 }
 
 #abrirBarra{
@@ -143,34 +152,32 @@ td{
 }
 
 .search-input {
-  width: 50%;
+  width: 60%;
   font-size: inherit;
   padding: .4em;
   border: 1px solid #777;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
 }
 
 .search-btn {
-  display: flex;
+
   align-items: center;
-  padding: 0 1.25rem;
+  padding: 0 0.25rem;
   border: 1px solid #777;
   background-color: #F8F8F8;
-  border-left: none;
+  border-left: 10px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  cursor: pointer;
+
 }
 .search-btn:hover{
   transition: box-hsadow 0.5s ease;
   box-shadow: 0 0.1em 0.4rem rgba(0, 0, 0, .95);
   cursor: pointer;
-}
-
-.search-btn:hover {
   background-color: #F0F0F0;
 }
+
 .barraIzquierda a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -280,5 +287,9 @@ footer {
   margin-left: -100px;
   border-radius: 10px;
 }
+#logoutBTN{
+  width: 60px;
+}
+
 
 

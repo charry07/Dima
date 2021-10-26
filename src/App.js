@@ -122,7 +122,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         {sessionStorage.getItem('token')?(
           <div className="appBody" >
             <Cabezera/>
@@ -140,7 +140,7 @@ export class App extends React.Component {
                   />
                 
                 <BarraBusqueda/>
-                {/* <Logout/> */}
+                
                 
                 <h3 id="gu">Gestion Usuarios</h3>
               </div>
@@ -156,15 +156,18 @@ export class App extends React.Component {
             <Footer/>
           </div>
         ):
-        (
-          <div id="contenedorInicioSeccion">
-            <img src={LogoDima} alt="Logo DiMA" id="LogoDimaInicioSeccion" />
-            <div id="iniciarSeccion">
-              <Login/>
+        ( 
+          <div id="BodyLogin">
+            <div id="contenedorInicioSeccion">
+              <img src={LogoDima} alt="Logo DiMA" id="LogoDimaInicioSeccion" />
+              <div id="iniciarSeccion">
+                <Login/>
+              </div>
             </div>
           </div>
+          
         )}
-      </>
+      </div>
     );
   }
 }
