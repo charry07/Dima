@@ -10,9 +10,16 @@ export class Login extends React.Component{
         .then(res => {
             console.log('Todo bien ESTE ES EL TOKEN!: ',res.data);
             sessionStorage.setItem('token',res.data);
+            window.location.reload(true);
         })
         .catch(err => console.error('Hubo Un Error',err))
     }
+    reload = () => {
+        
+            window.location.reload(true);
+        
+    }
+
 
     render(){
         return(

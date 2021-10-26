@@ -10,7 +10,8 @@ import Footer from './components/Footer'
 import axios from 'axios';
 import Login from './components/Login'
 import LogoDima from './images/LogoDima.png'
-// import {googleAuth} from '../backend/src/controllers/authController'
+
+
 
 
 
@@ -23,7 +24,6 @@ export class App extends React.Component {
       usuarios: [],
       selectedUsuario: this.emptyUsuario,
       abrirContenido: false,
-      abrirHome:true
     };
 
     this.onFormChange = this.onFormChange.bind(this);
@@ -32,11 +32,6 @@ export class App extends React.Component {
     this.onClearUser = this.onClearUser.bind(this);
     this.onSaveUser = this.onSaveUser.bind(this);
     this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
-  }
-  reload = () => {
-    if (sessionStorage.getItem('token')) {
-      window.location.reload(true);
-    }
   }
 
   showFormNuevoUsuario () {
@@ -129,7 +124,7 @@ export class App extends React.Component {
     return (
       <>
         {sessionStorage.getItem('token')?(
-          <div className="appBody" hidden={!this.state.abrirHome}>
+          <div className="appBody" >
             <Cabezera/>
             <div id="contenedor">
               <h1 style={{ textAlign: 'center' }}>GESTION DE USUARIOS Y ROLES DEL SISTEMA</h1>

@@ -35,12 +35,25 @@ body{
   padding: 4px;
   margin: 4px;
 }
-
+@media screen and (max-width: 800px) {
+  table {
+      width:100%;
+  }
+  #tablaUsuarios{
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border: 1px solid;
+    padding: 4px;
+    text-align: center;
+  }
+}
 #tablaUsuarios{
   width: 100%;
   border: 1px solid;
   padding: 4px;
   text-align: center;
+  overflow-x: auto;
 }
 #tbodyUsuarios{
   background-color: rgb(184, 184, 184);
@@ -241,7 +254,8 @@ footer {
 }
 #Login:hover{
   transition:  0.1s ease;
-  box-shadow: 0 0.0em 1.4rem rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0.0em 2.4rem rgba(255, 255, 255, 0.95);
+  transition: 0.5s ease;
 }
 #Login{
   width: 95px;
@@ -256,13 +270,15 @@ footer {
 }
 #LogoDimaInicioSeccion{
   border-radius: 5px;
+  box-shadow: 0 0.0em 10rem rgba(0, 0, 0, 0.95);
 }
 #contenedorInicioSeccion{
   position: fixed;
   top: 30%;
-  left: 50%;
+  left: 40%;
   margin-top: -50px;
   margin-left: -100px;
   border-radius: 10px;
 }
+
 
