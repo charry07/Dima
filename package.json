@@ -23,6 +23,7 @@
     "latest": "^0.2.0",
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
+    "package-name": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-login": "^5.2.2",
@@ -34,9 +35,10 @@
     "write-json-file": "^5.0.0"
   },
   "scripts": {
-    "app": "react-scripts start",
+    "start": "react-scripts start",
     "serverBackend": "nodemon backend/src/index.js",
-    "start": "react-scripts start"
+    "app": "npm-run-all -p serverBackend app",
+    "build": "node backend/src/index.js/ && npm install && npm build"
   },
   "eslintConfig": {
     "extends": [
