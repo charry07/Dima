@@ -13,8 +13,6 @@ if (process.env.NODE_ENV !== 'production'){
 }
 
 
-
-
 // settings
 app.set('port', process.env.PORT || 5000)
 
