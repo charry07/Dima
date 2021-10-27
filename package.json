@@ -36,9 +36,14 @@
     "write-json-file": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "cross-env NODE_ENV=development node backend/src/index.js ",
+    "postinstall": "npm run build",
+    "build": "cross-env NODE_ENV=production webpack",
+    "server:dev": "webpack-dev-server",
+    "app": "react-scripts start",
     "back": "node backend/src/index.js",
-    "start1": "npm-run-all --parallel frontend backend"
+    "start": "cross-env NODE_ENV=production node backend/src/index.js",
+    "start1": "npm-run-all --parallel app back"
   },
   "eslintConfig": {
     "extends": [
