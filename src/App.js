@@ -30,6 +30,7 @@ export class App extends React.Component {
     this.onSaveUser = this.onSaveUser.bind(this);
     this.showFormNuevoUsuario = this.showFormNuevoUsuario.bind(this);
   }
+  
 
   showFormNuevoUsuario () {
     if (this.state.abrirContenido === true) {

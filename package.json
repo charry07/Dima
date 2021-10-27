@@ -36,9 +36,9 @@
     "write-json-file": "^5.0.0"
   },
   "scripts": {
-    "frontend": "react-scripts start",
-    "backend": "node backend/src/index.js",
-    "start": "npm-run-all --parallel frontend backend"
+    "start": "react-scripts start",
+    "back": "node backend/src/index.js",
+    "start1": "npm-run-all --parallel frontend backend"
   },
   "eslintConfig": {
     "extends": [
