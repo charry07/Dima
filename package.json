@@ -36,7 +36,7 @@
   "scripts": {
     "app": "react-scripts start",
     "serverBackend": "nodemon backend/src/index.js",
-    "start": "npm-run-all -p serverBackend app"
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
