@@ -35,10 +35,9 @@
     "write-json-file": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "serverBackend": "nodemon backend/src/index.js",
-    "star1t": "npm-run-all -p serverBackend app",
-    "build": "node backend/src/index.js && npm install && npm build"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/src/index.js",
+    "client": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
