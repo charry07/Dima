@@ -38,7 +38,7 @@
   "scripts": {
     "frontend": "react-scripts start",
     "backend": "node backend/src/index.js",
-    "start": "concurrently --kill-others \"npm run frontend\" \"npm run backend\""
+    "start": "npm-run-all --parallel frontend backend"
   },
   "eslintConfig": {
     "extends": [
