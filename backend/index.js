@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== 'production'){
 
 
 // settings
-app.set('port', process.env.PORT || 4000 )
+app.set('port', process.env.PORT_BACK || 4000 )
 
 //funciones antes de rutas (Middlewares)
 app.use(morgan('dev'));
