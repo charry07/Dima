@@ -1,2 +1,2 @@
-web: npm start && npm run back
+web: npm start 
 server: npm run back
