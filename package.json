@@ -32,11 +32,11 @@
     "reactstrap": "^8.10.0",
     "server.js": "^1.0.0",
     "web-vitals": "^1.1.2",
-    "write-json-file": "^5.0.0",
-    "npm-run-all": "^4.1.5"
+    "write-json-file": "^5.0.0"
   },
+  "type": "module",
   "scripts": {
-    "app": "react-scripts start",
+    "app": "node src/index.js",
     "back": "node backend/index.js",
     "start": "npm-run-all -p app back"
   },
@@ -59,7 +59,6 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.13",
-    "npm-run-all": "^4.1.5"
+    "nodemon": "^2.0.13"
   }
 }
