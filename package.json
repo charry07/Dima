@@ -12,7 +12,6 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.22.0",
     "bootstrap": "^5.1.3",
-    "build": "^0.1.4",
     "concurrently": "^6.3.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -33,17 +32,14 @@
     "reactstrap": "^8.10.0",
     "server.js": "^1.0.0",
     "web-vitals": "^1.1.2",
-    "write-json-file": "^5.0.0"
+    "write-json-file": "^5.0.0",
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node backend/src/index.js ",
-    "postinstall": "npm run build",
-    "build": "cross-env NODE_ENV=production webpack",
-    "server:dev": "webpack-dev-server",
     "app": "react-scripts start",
     "back": "node backend/src/index.js",
-    "start": "cross-env NODE_ENV=production node backend/src/index.js",
-    "start1": "npm-run-all --parallel app back"
+    "start1": "cross-env NODE_ENV=production node backend/src/index.js",
+    "start": "npm-run-all --parallel app back"
   },
   "eslintConfig": {
     "extends": [
@@ -66,6 +62,5 @@
   "devDependencies": {
     "nodemon": "^2.0.13",
     "npm-run-all": "^4.1.5"
-  },
-  "heroku-run-build-script": true
+  }
 }
