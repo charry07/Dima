@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== 'production'){
 
 
 // settings
-app.set('port', process.env.PORT || 5000)
+app.set('port', process.env.PORT || 5000 )
 
 //funciones antes de rutas (Middlewares)
 app.use(morgan('dev'));
@@ -36,5 +36,5 @@ app.use(express.static(path.join(__dirname, '../../public')));
 
 //Starting the server
 app.listen (app.get('port'), () => {
-    console.log (`server on port ${app.get('port')}`)
+    console.log (`Servidor En Puerto --> ${app.get('port')}`)
 })

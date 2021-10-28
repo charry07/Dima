@@ -37,9 +37,9 @@
   },
   "scripts": {
     "app": "react-scripts start",
-    "back": "node backend/src/index.js",
-    "start1": "cross-env NODE_ENV=production node backend/src/index.js",
-    "start": "npm-run-all -p app back"
+    "start": "node backend/src/index.js",
+    "heroku-postbuild": "cd dima && npm --production=false && npm run build",
+    "start1": "npm-run-all -p app back"
   },
   "eslintConfig": {
     "extends": [
