@@ -1,5 +1,5 @@
 # DIMA #Trello ->https://trello.com/b/gw4PT9t6/devs-grupo-ciclo-3
-Este es el repositorio del proyecto ciclo 3 MisionTic 2022
+proyecto ciclo 3 MisionTic 2022
 
 Anderson Charry Naranjo (charry072013@gmail.com) git : charry07
 
